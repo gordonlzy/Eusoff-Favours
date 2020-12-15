@@ -1,8 +1,3 @@
-var TOKEN = "1488628659:AAGG49VW24lhVNx1ZcBkB-e_ciI7Zi4T7f4";
-var sheet_id = "1MiPByQzVG-Zwe0vDSYjFSU-gfTt5uwH8JKQY61tk9JQ";
-var telegramUrl = "https://api.telegram.org/bot" + TOKEN;
-var webAppUrl = "https://script.google.com/macros/s/AKfycbyaPIctzmVCp-ZVzNueI2vEgPxvXas1eoqPluQ0rgaYCkKZzPSl/exec";
-
 // main function to deal with users
 function doPost(e) {
     var contents = JSON.parse(e.postData.contents);
