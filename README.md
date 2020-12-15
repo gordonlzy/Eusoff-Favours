@@ -1,6 +1,6 @@
 # favours_bot
 
-simple telebot to represent functionality of the app we create for the Eusoff Winter Hackathon
+A telegram bot written in javascript that we created for the Eusoff Winter Hackathon
 
 Basic Functionality
 - Register an account 				    /register
