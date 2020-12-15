@@ -1,4 +1,4 @@
-# favours_bot
+# Eusoff Favours
 
 A telegram bot written in javascript that we created for the Eusoff Winter Hackathon
 
