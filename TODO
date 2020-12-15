@@ -1,0 +1,16 @@
+1. Implement a total 'credit/favour/whatever you want to call it' system where the user starts with certain amount of credit and uses up the credit when a request is made. Done!
+
+2. Implement a remark column so that users can add remarks on their requests. (Vimuth working on it) Done!
+
+3. Add 'Taken' and 'Completed' as possible statuses that a request can have. Done!
+
+4. Implement 'take request' so a registered user can take an active request, the active request's status will change to 
+   'Taken' and when the request is done, status changes to 'Completed' and credit is added to the user's total credits. Done!
+
+5. Implement a simp system where a user can choose to 'simp' for an active request made by the opposite gender by not taking any credits. done!
+
+6. Implement a normal leaderboard and a simp leaderboard. Done!
+
+7. Help and check credit commands to be implemented. done!
+
+8. It's 1.28am, 16 Dec 2020. We fixed the remaining bugs and split each function to different files for clarity :)
