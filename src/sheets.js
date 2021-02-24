@@ -1,6 +1,3 @@
-// var sheet_id = "1zZOXeMzTRbk0wTqcQz2WXH0I-uSH8YN4RqrUHuc3hjc";
-var sheet_id = "1MiPByQzVG-Zwe0vDSYjFSU-gfTt5uwH8JKQY61tk9JQ";
-
 var Requests = SpreadsheetApp.openById(sheet_id).getSheetByName('Active_Request');
 var Users = SpreadsheetApp.openById(sheet_id).getSheetByName('Users');
 
