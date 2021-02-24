@@ -1,3 +1,4 @@
+
 function getProfile(userID) {
   var data = userInfo(userID);
   var credits = data.total_credits;
@@ -6,8 +7,8 @@ function getProfile(userID) {
   var simp = data.simp_count;
 
   var rangeValues = requestRange();
-  var strReqMade = "\n\nRequests Made: \n".bold();
-  var strReqTaken = "\nRequests Taken: ".bold();
+  var strReqMade = "\n\nRequests you have made: \n".bold();
+  var strReqTaken = "\nRequests you have yet to complete: ".bold();
   var strFinal = '';
 
   for (i = 0; i < requestLastRow() - 1; i++) {
@@ -16,7 +17,7 @@ function getProfile(userID) {
 
     if (req.userId == userID && req.status !== "Completed" && req.status !== "Cancelled") {
       strReqMade += '\n' + req.request + '\nCredit(s): ' + req.credits + '\nRef number: ' 
-      + req.ref + '\nRemark: ' + req.remark + '\n';
+      + req.ref + '\nRemark: ' + req.remark + '\nStatus: ' + req.status + '\n';
     } else if (req.slaveId == userID && req.status == "Taken") {
       strReqTaken += '\n\n' + req.request + '\nCredit(s): ' + req.credits + '\nMade by: ' + user.name +
       '\nRef number: ' + req.ref + '\nRemark: ' + req.remark + '\n';
@@ -24,9 +25,9 @@ function getProfile(userID) {
   }
 
   if (credits === 0) {
-    strFinal = "Hi " + name + "(" + room + ")! " + "You have 0 credits:( Do some good! \nSimp Count: " + simp;
+    strFinal = "Hi " + name + " (" + room + ")! " + "You have 0 credits:( Do some good! \nSimp Count: " + simp;
   } else {
-    strFinal = "Hi " + name + "(" + room + ")! " + "You have " + credits + " credits!\nSimp Count: " + simp;
+    strFinal = "Hi " + name + " (" + room + ")! " + "You have " + credits + " credits!\nSimp Count: " + simp;
   }
   var strArr = [strFinal, strReqMade, strReqTaken];
   return strArr;
@@ -35,7 +36,7 @@ function getProfile(userID) {
 function updateProfile(userID, data, message_id) {
   var data_arr = data.split('-');
   var keyboardNumber = data_arr[1];
-  
+
   var keyboard = getProfileKeyboard(keyboardNumber);
 
   if (keyboardNumber == 1) {
@@ -51,11 +52,11 @@ function getProfileKeyboard(keyboardNumber) {
   var firstKeyboard = [
           [
             {
-              text: 'Check Own Requests',
+              text: 'My Requests Made',
               callback_data: 'toggleProfile-' + 2,
             },
             {
-              text: 'Check Requests Taken',
+              text: "Requests I've Taken",
               callback_data: 'toggleProfile-' + 3,
             },
           ],
@@ -73,7 +74,7 @@ function getProfileKeyboard(keyboardNumber) {
               callback_data: 'toggleProfile-' + 1,
             },
             {
-              text: 'Check Requests Taken',
+              text: "Requests I've Taken",
               callback_data: 'toggleProfile-' + 3,
             },
           ],
@@ -91,7 +92,7 @@ function getProfileKeyboard(keyboardNumber) {
               callback_data: 'toggleProfile-' + 1,
             },
             {
-              text: 'Check Own Requests',
+              text: 'My Requests Made',
               callback_data: 'toggleProfile-' + 2,
             },
           ],
