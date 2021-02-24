@@ -5,7 +5,7 @@ function getLeaderboardRow(userID) {
   var lastColumn = rangeData.getLastColumn();
   var searchRange = leaderboard_sheet.getRange(2, 1, lastRow - 1, lastColumn);
   var rangeValues = searchRange.getValues();
-  var result = "Leaderboards" + '\n';
+  var result = "Leaderboard 👑".bold() + '\n\n';
   
   for (i = 0; i < 3; i++) {
       var name = rangeValues[i][0];
