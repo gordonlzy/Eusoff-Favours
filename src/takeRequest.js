@@ -39,14 +39,13 @@ function takeRequest(userID, refId) {
     } else {
       setRequestStatus(refId, "Taken");
       setRequestSlave(refId, userID);
-      setRequestPending(refId, req.credits);
+      setRequestPending(refId, req.credits); 
 
       var slave = userInfo(userID);
-      var str1 = 'Request taken: ' + req.request + '\nCredit(s): ' + req.credits + '\nRef number: ' + req.ref + '\nRemark: ' + req.remark;
-      var str2 = "Request taken by " + slave.name + " from " + slave.room;
+      var str1 = 'You have taken a new request!'.bold() + '\nRequest taken: ' + req.request + '\nCredit(s): ' + req.credits + '\nRef number: ' + req.ref + '\nRemark: ' + req.remark;
+      var str2 = 'Your request has been taken'.bold() + '\nRequest taken: ' + req.request + '\nTaken by: ' + slave.name + ' (' + slave.room + ') \nCredit(s): ' + req.credits + '\nRef number: ' + req.ref + '\nRemark: ' + req.remark;
       
       sendText(userID, str1);
-      // sendMenu(userID);
       sendText(requestor_id, str2);    
     }
 }
