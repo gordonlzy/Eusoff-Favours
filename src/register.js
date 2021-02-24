@@ -16,15 +16,14 @@ function register(userID) {
         user.name +
         '!!' +
         '\n\n' +
-        "To view profile /profile \n" + 
-        "To view active requests /view \n" + 
-        "To make request /make_request\n\n" + 
-        "To view the leaderboards /leaderboard\n" +
-        "To view the simp leaderboards /simp_leaderboard\n\n" + 
-        "To subscribe to favour updates /subscribe\n" + 
-        "To unsubscribe from updates /unsubscribe\n\n" + 
-        "To mark a request as complete /complete\n" +
-        "To delete your current requests /cancel\n" ;
+        "/profile - To check your profile details  \n\n" +
+        "/view - To view, take or simp for active requests  \n" + 
+        "/make_request - To make a request \n" + 
+        "/complete - To mark your request as complete \n" +
+        "/cancel - To delete your current requests that are not taken \n\n" +
+        "/leaderboard - To view the leaderboards \n\n" +
+        "/subscribe - To get notified of new favours \n" + 
+        "/unsubscribe - To unsubscribe from updates \n";
     }
     sendText(userID, text);
 }
@@ -53,15 +52,14 @@ function addUser(data) {
         'Room: ' +
         room +
         '\n\n' +
-        "To view your profile /profile \n" +
-        "To view active requests /view \n" + 
-        "To make request /make_request\n\n" + 
-        "To view the leaderboards /leaderboard\n" +
-        "To view the simp leaderboards /simp_leaderboard\n\n" + 
-        "To subscribe to favour updates /subscribe\n" + 
-        "To unsubscribe from updates /unsubscribe\n\n" +
-        "To mark a request as complete /complete\n" +
-        "To delete your current requests /cancel\n";
+        "/profile - To check your profile details  \n\n" +
+        "/view - To view, take or simp for active requests  \n" + 
+        "/make_request - To make a request \n" + 
+        "/complete - To mark your request as complete \n" +
+        "/cancel - To delete your current requests that are not taken \n\n" +
+        "/leaderboard - To view the leaderboards \n\n" +
+        "/subscribe - To get notified of new favours \n" + 
+        "/unsubscribe - To unsubscribe from updates \n";
   
       sendText(id, text);
 }
